@@ -11,8 +11,17 @@
 #DML
 
 #SELECT
+select pid
+,sum(price) as TOTAL
+from test.dbo.stable03
 
 #SELECT INTO
+SELECT pid
+,sum(qunity) as sumqunity
+,item
+,sum(price)  as total
+into test.dbo.cartsort03 
+FROM [test].[dbo].[WUZCART03]
 
 #sum
 select pid
@@ -42,7 +51,8 @@ having sum(price)>100000
 #order by
 select * from test.dbo.cartsort03
 order by total desc;
-#group by-having- order by
+
+#group by->having-> order by
 select order
 ,sum(price) as TOTAL
 from tableehc01 
@@ -53,9 +63,26 @@ order by sum(price)
 
 #join
 
+
 #left join
+select oo.pid
+,oo.sumqunity
+,rr.item
+,rr.sumqunity
+from test.dbo.cartsort01 as oo
+left join  test.dbo.cartsort02 as rr
+on (oo.pid=rr.pid) 
 
 #left out join
 
 #innner join
-#
+
+#subquery
+
+#union
+
+#output
+select * form table A into outfile
+"c:/rdata/outfile01.txt"
+
+
