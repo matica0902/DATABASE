@@ -1,18 +1,61 @@
 #ER-MODEL
+
 #GRANT USER
+
 #CREATE TABLE
+
 #DROP TABLE
+
 #DDL
+
 #DML
+
 #SELECT
+
 #SELECT INTO
+
 #sum
+select pid
+,sum(price) as TOTAL
+from test.dbo.stable03
+
 #count
+select pid
+,sum(price) as TOTAL
+,count(pid) as COUNT
+from test.dbo.TABLEOPEN01
+
 #group by
+select pid
+,sum(price) as TOTAL
+,count(pid) as COUNT
+from test.dbo.TABLEOPEN01
+group by pid
+
 #having
+select order
+,sum(price) as TOTAL
+from tableehc01 
+group by order
+having sum(price)>100000
+
 #order by
+select * from test.dbo.cartsort03
+order by total desc;
+#group by-having- order by
+select order
+,sum(price) as TOTAL
+from tableehc01 
+group by order
+having sum(price)>100000
+order by sum(price)  
+
+
 #join
+
 #left join
+
 #left out join
+
 #innner join
 #
