@@ -1,0 +1,16 @@
+# DATABASE
+SQL 
+#ER-MODEL
+#GRANT USER
+#CREATE TABLE
+#DROP TABLE
+#DDL
+#DML
+#SELECT
+#SELECT INTO
+#group by 
+#having 
+#order by
+
+
+
